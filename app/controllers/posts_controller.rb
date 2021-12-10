@@ -46,6 +46,10 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
+    def set_user_post
+      @post = @current_user.posts.find(params[:id])
+    end
+
     # Only allow a list of trusted parameters through.
     def post_params
       params.require(:post).permit(:user_id, :message, :picture)
