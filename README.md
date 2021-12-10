@@ -53,7 +53,7 @@ _The **Co-Lab** MVP
 
 ### Goals
 
-- _Connections between user,_
+- _Connections between users,_
 - _Able to make posts and comments._
 - _like, post and comments._
 
@@ -75,35 +75,32 @@ _The **Co-Lab** MVP
 
 #### Wireframes
 
+ 
+![profile](https://user-images.githubusercontent.com/9592819/145590498-32154835-2c04-49c9-86d9-799eb5c42e00.JPG)
 
-![Dummy Link](url)
+- Profile
 
-- Desktop Landing
+![Landing](https://user-images.githubusercontent.com/9592819/145590451-b07818c2-e2f4-4307-b58f-f05b85e01b22.JPG)
 
-![Dummy Link](url)
+- Landing
 
-- Desktop Hero
+![Login](https://user-images.githubusercontent.com/9592819/145590552-c2cea78e-d1d8-4f9c-a073-44a6a2682eb2.JPG)
 
-![Dummy Link](url)
+- Resource Login
 
-- Resource Index
+![SignUp](https://user-images.githubusercontent.com/9592819/145590630-0f8371b5-e1df-4450-9ca3-c7cf893ada47.JPG)
 
-![Dummy Link](url)
+- Resource Create Post
 
-- Resource Show
+![Create Post](https://user-images.githubusercontent.com/9592819/145591590-780184a1-670b-4099-b1b6-176c0379068e.JPG)
 
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+- Create Post
 
 #### Component Tree
 
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+[Component Tree Sample]<img width="2088" alt="Component Tree" src="https://user-images.githubusercontent.com/9592819/145591858-9551b481-8284-4ac3-a6ad-bf23c8681514.png">
+
 
 #### Component Architecture
 
@@ -138,16 +135,16 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| README              |    L     |     3 hrs      |     0 hrs     |    3 hrs    |
-| Post                |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Edit                |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| README              |    L     |     3 hrs      |     3 hrs     |    3 hrs    |
+| Post                |    H     |     6 hrs      |     0 hrs     |     TBD     |
+| Edit                |    H     |     4 hrs      |     0 hrs     |     TBD     |
 | Search              |    H     |     3 hrs      |     0 hrs     |     TBD     |
 | Comments            |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Sort                |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| LogIn               |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Home                |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| Sort                |    H     |     2 hrs      |     0 hrs     |     TBD     |
+| LogIn               |    H     |     2 hrs      |     0 hrs     |     TBD     |
+| Home                |    H     |     5 hrs      |     0 hrs     |     TBD     |
 | Profile             |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     0 hrs     |     TBD     |
+| TOTAL               |          |    31 hrs      |     0 hrs     |     TBD     |
 
 
 <br>
@@ -156,8 +153,8 @@ src
 
 #### ERD Model
 
+![ERD Co-lab](https://user-images.githubusercontent.com/9592819/145591736-f9af126a-b7e5-4e51-bc03-965d57725e48.JPG)
 
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
 <br>
 
 ***
