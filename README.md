@@ -75,13 +75,14 @@ _The **Co-Lab** MVP
 
 #### Wireframes
 
-![Landing](https://user-images.githubusercontent.com/9592819/145590451-b07818c2-e2f4-4307-b58f-f05b85e01b22.JPG)
-
-- Landing
-- 
+ 
 ![profile](https://user-images.githubusercontent.com/9592819/145590498-32154835-2c04-49c9-86d9-799eb5c42e00.JPG)
 
 - Profile
+
+![Landing](https://user-images.githubusercontent.com/9592819/145590451-b07818c2-e2f4-4307-b58f-f05b85e01b22.JPG)
+
+- Landing
 
 ![Login](https://user-images.githubusercontent.com/9592819/145590552-c2cea78e-d1d8-4f9c-a073-44a6a2682eb2.JPG)
 
@@ -134,16 +135,16 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| README              |    L     |     3 hrs      |     0 hrs     |    3 hrs    |
-| Post                |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Edit                |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| README              |    L     |     3 hrs      |     3 hrs     |    3 hrs    |
+| Post                |    H     |     6 hrs      |     0 hrs     |     TBD     |
+| Edit                |    H     |     4 hrs      |     0 hrs     |     TBD     |
 | Search              |    H     |     3 hrs      |     0 hrs     |     TBD     |
 | Comments            |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Sort                |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| LogIn               |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Home                |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| Sort                |    H     |     2 hrs      |     0 hrs     |     TBD     |
+| LogIn               |    H     |     2 hrs      |     0 hrs     |     TBD     |
+| Home                |    H     |     5 hrs      |     0 hrs     |     TBD     |
 | Profile             |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     0 hrs     |     TBD     |
+| TOTAL               |          |    31 hrs      |     0 hrs     |     TBD     |
 
 
 <br>
