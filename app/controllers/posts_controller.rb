@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :update, :destroy]
+  before_action :set_post, only: :show
+  before_action :set_user_post, only: [:create, :update, :destroy]
   before_action :authorize_request, except: [:index, :show]
 
   # GET /posts
@@ -17,12 +18,12 @@ class PostsController < ApplicationController
   # POST /posts
   def create
     @post = Post.new(post_params)
-
-    if @post.save
-      render json: @post, status: :created, location: @post
-    else
-      render json: @post.errors, status: :unprocessable_entity
-    end
+      @post.user = @current_user
+        if @post.save
+          render json: @post, status: :created, location: @post
+        else
+          render json: @post.errors, status: :unprocessable_entity
+        end
   end
 
   # PATCH/PUT /posts/1
