@@ -53,7 +53,7 @@ _The **Co-Lab** MVP
 
 ### Goals
 
-- _Connections between user,_
+- _Connections between users,_
 - _Able to make posts and comments._
 - _like, post and comments._
 
