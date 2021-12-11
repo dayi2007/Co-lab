@@ -3,7 +3,7 @@ import logo from '../assets/logoSmall.png';
 
 export default function PostCreate({ handlePostCreate }) {
   const [formData, setFormData] = useState({
-    name: '',
+    message: '',
   });
   const { message } = formData;
 

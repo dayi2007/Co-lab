@@ -9,7 +9,7 @@ const PostList = (props) => {
             props.posts.map(post =>(
                 <div key={post.id} className='posts'>
                  <p>{post.message}</p>
-                 <h3>{post.user}</h3>   
+                 <h3>user: {post.user_id}</h3>   
                 </div>
             ))
         }

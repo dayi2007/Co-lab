@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, Route, Switch, useHistory } from "react-router-dom";
 import PostList from "./components/PostList";
 import PostCreate from "./components/PotsCreate";
+import Layout from "./components/Layout";
 import LogIn from "./screens/LogIn";
 import SignUp from "./screens/SignUp";
 // import UserProfile from "./components/UserProfile";
@@ -57,7 +58,7 @@ function App() {
 
   return (
     <main>
-  {/* <Layout currentUser={currentUser} handleLogout={handleLogout}> */}
+    <Layout currentUser={currentUser} handleLogout={handleLogout}>
         {/* <Switch> */}
         <Link to="/">
           <h1>Posts</h1>
@@ -74,12 +75,8 @@ function App() {
           <Route path='/create'>
           <PostCreate handlePostCreate={handlePostCreate} />
           </Route>
-
-          {/* <Route path='/'>
-            <MainContainer currentUser={currentUser}/>
-          </Route> */}
         {/* </Switch> */}
-      {/* </Layout> */}
+    </Layout>
       <footer>
         <p>&copy; CodeDiamonds Co.</p>
       </footer>
