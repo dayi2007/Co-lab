@@ -5,7 +5,7 @@ const PostList = (props) => {
     return(
         <div>
         {
-            console.log(props.posts)}{
+            // console.log(props.posts)}{
             props.posts.map(post =>(
                 <div key={post.id} className='posts'>
                  <p>{post.message}</p>

@@ -21,7 +21,6 @@ function App() {
     const fetchPost = async () => {
       const posts = await getAllPosts();
       setPosts(posts);
-      console.log(posts);
     };
     fetchPost();
   }, [])
@@ -56,12 +55,16 @@ function App() {
     history.push('/');
   };
 
+  console.log(currentUser)
+  // const image = currentUser.picture
+  // const img = image.toString()
+  // console.log(img)
+
   return (
-    <main>
+ 
     <Layout currentUser={currentUser} handleLogout={handleLogout}>
         {/* <Switch> */}
         <Link to="/">
-          <h1>Posts</h1>
         </Link>
           <Route exact path="/">
             <PostList posts={posts} />
@@ -76,11 +79,12 @@ function App() {
           <PostCreate handlePostCreate={handlePostCreate} />
           </Route>
         {/* </Switch> */}
-    </Layout>
-      <footer>
+ 
+      {/* <footer>
         <p>&copy; CodeDiamonds Co.</p>
-      </footer>
-      </main>
+      </footer> */}
+      </Layout>
+  
 
       
 
