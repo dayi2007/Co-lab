@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, Route, Switch, useHistory } from "react-router-dom";
 import PostList from "./components/PostList";
 import PostCreate from "./components/PotsCreate";
+import PostEdit from "./components/PostEdit";
 import Layout from "./components/Layout";
 import LogIn from "./screens/LogIn";
 import SignUp from "./screens/SignUp";
@@ -50,9 +51,22 @@ function App() {
     removeToken();
   };
   const handlePostCreate = async (formData) => {
-    const newFood = await postPost(formData);
-    setPosts((prevState) => [...prevState, newFood]);
+    const newPost = await postPost(formData);
+    setPosts((prevState) => [...prevState, newPost]);
     history.push('/');
+  };
+  const handlePostUpdate = async (id, formData) => {
+    const newPost = await putPost(id, formData);
+    setPosts((prevState) =>
+      prevState.map((post) => {
+        return post.id === Number(id) ? newPost : post;
+      })
+    );
+    history.push('/posts');
+  };
+  const handlePostDelete = async (id) => {
+    await deletePost(id);
+    setPosts((prevState) => prevState.filter((post) => post.id !== id));
   };
 
   console.log(currentUser)
@@ -67,7 +81,7 @@ function App() {
         <Link to="/">
         </Link>
           <Route exact path="/">
-            <PostList posts={posts} />
+            <PostList currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete}/>
           </Route>
           <Route path='/login'>
             <LogIn handleLogin={handleLogin} />
@@ -75,9 +89,15 @@ function App() {
           <Route path='/singup'>
             <SignUp handleSignUp={handleSignUp} />
           </Route>
-          <Route path='/create'>
+          <Route exact path='/create'>
           <PostCreate handlePostCreate={handlePostCreate} />
           </Route>
+          <Route exact path='/posts/:id/edit'>
+          <PostEdit posts={posts} handlePostUpdate={handlePostUpdate} />
+          </Route>
+          {/* <Route  path="/posts/:id">
+            <Post currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete}/>
+          </Route> */}
         {/* </Switch> */}
  
       {/* <footer>

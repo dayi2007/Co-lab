@@ -13,8 +13,12 @@ export default function Layout({ currentUser, handleLogout, children }) {
                 <div className="profilePic">
                     <img className="profilePicture" src={currentUser.picture} alt="user-picture"/>
                 </div>
+                <div>
+            <p>{currentUser.username}</p>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
             </div>
-            <p>Welcome, {currentUser.username}</p>
+            <p>Welcome, {currentUser.username} {currentUser.id}</p>
           </div>
         ) : (
           <Link to='/login'>Login/Register</Link>
