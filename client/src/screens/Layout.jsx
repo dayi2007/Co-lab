@@ -11,9 +11,9 @@ export default function Layout({ currentUser, handleLogout, children }) {
       <Footer currentUser={currentUser}/>
       
       <p className="copy">&copy; CodeDiamonds Co.</p>
-      <div>
+      {/* <div>
         <button onClick={handleLogout}>Logout</button>
-      </div>
+      </div> */}
     </main>
   );
 }

@@ -5,11 +5,10 @@ import PostList from "./components/Post/PostList";
 import PostCreate from "./components/Post/PotsCreate";
 import PostEdit from "./components/Post/PostEdit";
 import UserEdit from "./components/User/UserEdit";
-import Layout from "./screens/Layout";
 import LogIn from "./screens/LogIn";
 import SignUp from "./screens/SignUp";
 import Profile from './screens/Profile';
-import {  loginUser, registerUser, verifyUser, removeToken, getOneUser } from './services/auth';
+import {  loginUser, registerUser, verifyUser, removeToken } from './services/auth';
 import { getAllPosts, postPost, putPost, deletePost } from './services/post';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
   const[toggleFetch, setToggleFetch] = useState(true)
-  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -51,6 +49,7 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
+    history.push('/');
   };
   const handlePostCreate = async (formData) => {
     const newPost = await postPost(formData);
@@ -70,22 +69,9 @@ function App() {
     await deletePost(id);
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
   };
-  useEffect(() => {
-    const fetchUser = async () => {
-      const user = await getOneUser();
-      setUser(user);
-    };
-    fetchUser();
-  }, [])
-  console.log(user)
-  // console.log(currentUser.name)
-  // const image = currentUser.picture
-  // const img = image.toString()
-  // console.log(img)
 
   return (
     <div> 
-      {/* <Layout currentUser={currentUser} handleLogout={handleLogout}/> */}
         <Link to="/">
         </Link>
           <Route exact path="/">
@@ -107,7 +93,7 @@ function App() {
             <UserEdit currentUser={currentUser} setCurrentUser={setCurrentUser} />
           </Route>
           <Route exact path='/users/:id'>
-            <Profile currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete} user={user}/>
+            <Profile currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete} handleLogout={handleLogout} />
           </Route>
     </div> 
   );

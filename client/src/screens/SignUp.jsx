@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Nav from '../components/Nav';
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -19,13 +20,14 @@ export default function Register(props) {
   };
 
   return (
+    <div>
+    <Nav />
     <form
       onSubmit={(e) => {
         e.preventDefault();
         handleSignUp(formData);
       }}
     >
-      <h3>Register</h3>
       <label>
         Username:
         <input
@@ -68,5 +70,6 @@ export default function Register(props) {
       <br />
       <button>Co-Lab</button>
     </form>
+    </div>
   );
 }

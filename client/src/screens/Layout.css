@@ -3,6 +3,7 @@
   height: 85px;
   border-radius: 90px;
   background-image: conic-gradient(from 250deg at 50% 50%, rgba(38, 79, 225, 0.466) 50deg, #a33fe26b 199.81deg, rgba(38, 79, 225, 0.527) 390deg);
+  backdrop-filter: blur(180px);
   margin: auto;
   margin-right: 10px;
   float: right;  

@@ -1,9 +1,9 @@
 .profileImg{
-    width: 170vw;
+    width: 210vw;
     height: 100vh;
     align-items: center;
     position: absolute;
-    left: -100px;
+    left: -190px;
     top: -25px;
     z-index: 1;
 
@@ -20,6 +20,9 @@
 }
 .userInfo{
     position: relative;
-    margin-top: 90vh;
+    height: 50vh;
+    margin-top: 75vh;
     border-radius: 20px;
+    background-color: #ffffff;
+    z-index: 2;
 }

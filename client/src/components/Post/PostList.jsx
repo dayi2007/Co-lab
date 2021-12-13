@@ -10,11 +10,11 @@ const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
         {
              posts?.map((post) =>(
                 <div key={post.id} className='posts'>
-                    <Link to={`/users/${post.user_id}`}>
+                    <Link to={`/users/${post.user_id}`} className="linkProfile">
                     <img className="imgPostUser" src={post.user.picture} alt="UserImage"/>
                     <h9>{post.user.username}</h9> </Link>
                     <p className="message">{post.message}</p>
-                    <img className="imgPost" src={post.picture} alt="Post Image"/>    
+                    <img className="imgPost" src={post.picture} alt="Post Img"/>    
                     {currentUser?.id === post.user_id && (
                         <div className="editDelete"> 
                          <Link to={`/posts/${post.id}/edit`}>
