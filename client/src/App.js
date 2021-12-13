@@ -9,7 +9,7 @@ import Layout from "./screens/Layout";
 import LogIn from "./screens/LogIn";
 import SignUp from "./screens/SignUp";
 import Profile from './screens/Profile';
-import {  loginUser, registerUser, verifyUser, removeToken } from './services/auth';
+import {  loginUser, registerUser, verifyUser, removeToken, getOneUser } from './services/auth';
 import { getAllPosts, postPost, putPost, deletePost } from './services/post';
 
 function App() {
@@ -17,6 +17,8 @@ function App() {
   const [posts, setPosts] =useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
+  const[toggleFetch, setToggleFetch] = useState(true)
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -24,7 +26,7 @@ function App() {
       setPosts(posts);
     };
     fetchPost();
-  }, [])
+  }, [toggleFetch])
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -60,7 +62,7 @@ function App() {
     setPosts((prevState) =>
       prevState.map((post) => {
         return post.id === Number(id) ? newPost : post;
-      })
+      }),
     );
     history.push('/');
   };
@@ -68,7 +70,14 @@ function App() {
     await deletePost(id);
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
   };
-
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await getOneUser();
+      setUser(user);
+    };
+    fetchUser();
+  }, [])
+  console.log(user)
   // console.log(currentUser.name)
   // const image = currentUser.picture
   // const img = image.toString()
@@ -89,7 +98,7 @@ function App() {
             <SignUp handleSignUp={handleSignUp} />
           </Route>
           <Route exact path='/create'>         
-            <PostCreate handlePostCreate={handlePostCreate} /> 
+            <PostCreate handlePostCreate={handlePostCreate} toggleFetch={toggleFetch} setToggleFetch={setToggleFetch} /> 
           </Route>
           <Route path='/posts/:id/edit'>
             <PostEdit posts={posts} handlePostUpdate={handlePostUpdate} />
@@ -98,7 +107,7 @@ function App() {
             <UserEdit currentUser={currentUser} setCurrentUser={setCurrentUser} />
           </Route>
           <Route exact path='/users/:id'>
-            <Profile currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete}/>
+            <Profile currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete} user={user}/>
           </Route>
     </div> 
   );

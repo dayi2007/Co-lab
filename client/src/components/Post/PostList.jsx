@@ -8,10 +8,11 @@ const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
     <div>
         <Layout currentUser={currentUser} handleLogout={handlePostDelete} handleLogout={handleLogout}>
         {
-            posts.map((post) =>(
+             posts?.map((post) =>(
                 <div key={post.id} className='posts'>
+                    <Link to={`/users/${post.user_id}`}>
                     <img className="imgPostUser" src={post.user.picture} alt="UserImage"/>
-                    <h9>{post.user.username}</h9> 
+                    <h9>{post.user.username}</h9> </Link>
                     <p className="message">{post.message}</p>
                     <img className="imgPost" src={post.picture} alt="Post Image"/>    
                     {currentUser?.id === post.user_id && (

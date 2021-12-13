@@ -21,7 +21,7 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
         return user.id === Number(id) ? newUser : user;
       })
     );
-    history.push('/');
+    history.push('/users/:id');
   };
 
   useEffect(() => {

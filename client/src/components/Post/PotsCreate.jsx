@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import logo from '../../assets/logoSmall.png';
 
-export default function PostCreate({ handlePostCreate }) {
+export default function PostCreate({ handlePostCreate, toggleFetch, setToggleFetch }) {
   const [formData, setFormData] = useState({
     message: '',
     picture: '',
@@ -14,6 +14,7 @@ export default function PostCreate({ handlePostCreate }) {
       ...prevState,
       [name]: value,
     }));
+    setToggleFetch(!toggleFetch)
   };
 
   return (

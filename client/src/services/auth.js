@@ -34,3 +34,10 @@ export const verifyUser = async () => {
 export const removeToken = () => {
     api.defaults.headers.common.authorization = null;
 };
+
+export const getOneUser = async (id) => {
+    const resp = await  api.get(`users/${id}`);
+    // localStorage.setItem('authToken', resp.data.token);
+    // api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
+    return resp.data.user;
+};

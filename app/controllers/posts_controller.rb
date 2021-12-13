@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
 
-    render json: @posts, include: {user: {only: [:username, :picture]}}
+    render json: @posts, include: {user: {only: [:id, :username, :picture]}}
   end
 
   # GET /posts/1
