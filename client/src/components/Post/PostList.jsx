@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Layout from "../../screens/Layout";
+import './PostList.css';
 
-const PostList = ({ posts, handlePostDelete, currentUser }) => {
+const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
     return(
-        <div>
+    <div>
+        <Layout currentUser={currentUser} handleLogout={handlePostDelete} handleLogout={handleLogout}>
         {
-            // console.log(props.posts)}{
             posts.map((post) =>(
                 <div key={post.id} className='posts'>
-                    <p>{post.message} ID {post.id}</p>
-                    <img src={post.picture} />
-                    <h3>user: {post.user_id}</h3> 
+                    <img className="imgPostUser" src={post.user.picture} alt="UserImage"/>
+                    <h9>{post.user.username}</h9> 
+                    <p className="message">{post.message}</p>
+                    <img className="imgPost" src={post.picture} alt="Post Image"/>    
                     {currentUser?.id === post.user_id && (
                         <div className="editDelete"> 
                          <Link to={`/posts/${post.id}/edit`}>
@@ -22,10 +25,10 @@ const PostList = ({ posts, handlePostDelete, currentUser }) => {
             </div>
             ))   
         }
-       <Link to='/create'>
-        <button>Create</button>
-      </Link>
-        </div>
+       <Link to ={currentUser ? '/create' : '/login'}>
+        <button>Create</button></Link> 
+      </Layout>
+    </div>
     )
 }
 export default PostList;

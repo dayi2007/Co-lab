@@ -5,8 +5,9 @@ export default function Register(props) {
     username: '',
     email: '',
     password: '',
+    picture: '',
   });
-  const { username, email, password } = formData;
+  const { username, email, password, picture } = formData;
   const { handleSignUp } = props;
 
   const handleChange = (e) => {
@@ -51,6 +52,16 @@ export default function Register(props) {
           type='password'
           name='password'
           value={password}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <label>
+        Picture:
+        <input
+          type='url'
+          name='picture'
+          value={picture}
           onChange={handleChange}
         />
       </label>

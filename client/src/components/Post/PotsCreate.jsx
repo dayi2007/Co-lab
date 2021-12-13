@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../assets/logoSmall.png';
+import logo from '../../assets/logoSmall.png';
 
 export default function PostCreate({ handlePostCreate }) {
   const [formData, setFormData] = useState({
@@ -25,7 +25,6 @@ export default function PostCreate({ handlePostCreate }) {
     >
       <h3>Co-Lab</h3>
       <label>
-        Co-Lab:
         <input type='text' name='message' value={message} onChange={handleChange} />
         <input type='text' name='picture' value={picture} onChange={handleChange} />
       </label>

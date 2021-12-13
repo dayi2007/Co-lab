@@ -1,0 +1,25 @@
+.profileImg{
+    width: 170vw;
+    height: 100vh;
+    align-items: center;
+    position: absolute;
+    left: -100px;
+    top: -25px;
+    z-index: 1;
+
+}
+.logoOverlap img{
+    position: relative;
+    width: 114px;
+    height: 76px;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    backdrop-filter: blur(80px);
+    background-color: rgba(228, 145, 224, 0.281);
+}
+.userInfo{
+    position: relative;
+    margin-top: 90vh;
+    border-radius: 20px;
+}

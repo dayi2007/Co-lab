@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import logo from '../assets/logoSmall.png';
+import logo from '../../assets/logoSmall.png';
 
 export default function PostEdit({ posts, handlePostUpdate }) {
   const [formData, setFormData] = useState({
@@ -35,9 +35,8 @@ export default function PostEdit({ posts, handlePostUpdate }) {
     >
     <h3>Co-Lab</h3>
       <label>
-        Co-Lab:
         <input type='text' name='message' value={message} onChange={handleChange} />
-        <input type='text' name='picture' value={picture} onChange={handleChange} />
+        <input type='text' name='picture' value={picture} required autoFocus onChange={handleChange} />
       </label>
       <button className="buttonLogo"><img src={logo}/></button>
     </form>

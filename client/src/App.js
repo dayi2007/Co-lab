@@ -1,16 +1,16 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { Link, Route, Switch, useHistory } from "react-router-dom";
-import PostList from "./components/PostList";
-import PostCreate from "./components/PotsCreate";
-import PostEdit from "./components/PostEdit";
-import Layout from "./components/Layout";
+import { Link, Route, useHistory } from "react-router-dom";
+import PostList from "./components/Post/PostList";
+import PostCreate from "./components/Post/PotsCreate";
+import PostEdit from "./components/Post/PostEdit";
+import UserEdit from "./components/User/UserEdit";
+import Layout from "./screens/Layout";
 import LogIn from "./screens/LogIn";
 import SignUp from "./screens/SignUp";
-// import UserProfile from "./components/UserProfile";
-import { getAllPosts } from "./services/post.js";
+import Profile from './screens/Profile';
 import {  loginUser, registerUser, verifyUser, removeToken } from './services/auth';
-import { getAllPost, postPost, putPost, deletePost } from './services/post';
+import { getAllPosts, postPost, putPost, deletePost } from './services/post';
 
 function App() {
 
@@ -62,26 +62,25 @@ function App() {
         return post.id === Number(id) ? newPost : post;
       })
     );
-    history.push('/posts');
+    history.push('/');
   };
   const handlePostDelete = async (id) => {
     await deletePost(id);
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
   };
 
-  console.log(currentUser)
+  // console.log(currentUser.name)
   // const image = currentUser.picture
   // const img = image.toString()
   // console.log(img)
 
   return (
- 
-    <Layout currentUser={currentUser} handleLogout={handleLogout}>
-        {/* <Switch> */}
+    <div> 
+      {/* <Layout currentUser={currentUser} handleLogout={handleLogout}/> */}
         <Link to="/">
         </Link>
           <Route exact path="/">
-            <PostList currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete}/>
+            <PostList currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete} handleLogout={handleLogout}/>
           </Route>
           <Route path='/login'>
             <LogIn handleLogin={handleLogin} />
@@ -89,25 +88,19 @@ function App() {
           <Route path='/singup'>
             <SignUp handleSignUp={handleSignUp} />
           </Route>
-          <Route exact path='/create'>
-          <PostCreate handlePostCreate={handlePostCreate} />
+          <Route exact path='/create'>         
+            <PostCreate handlePostCreate={handlePostCreate} /> 
           </Route>
-          <Route exact path='/posts/:id/edit'>
-          <PostEdit posts={posts} handlePostUpdate={handlePostUpdate} />
+          <Route path='/posts/:id/edit'>
+            <PostEdit posts={posts} handlePostUpdate={handlePostUpdate} />
           </Route>
-          {/* <Route  path="/posts/:id">
-            <Post currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete}/>
-          </Route> */}
-        {/* </Switch> */}
- 
-      {/* <footer>
-        <p>&copy; CodeDiamonds Co.</p>
-      </footer> */}
-      </Layout>
-  
-
-      
-
+          <Route path='/users/:id/edit'>
+            <UserEdit currentUser={currentUser} setCurrentUser={setCurrentUser} />
+          </Route>
+          <Route exact path='/users/:id'>
+            <Profile currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete}/>
+          </Route>
+    </div> 
   );
 }
 

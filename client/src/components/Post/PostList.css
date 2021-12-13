@@ -1,0 +1,25 @@
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 1em 2vw 2em 2vw;
+    border: 1px solid rgb(209, 209, 209);
+    padding: 3vh;
+}
+.imgPost{
+    max-width: 70vw;
+    max-height: 70vh;
+    align-self: center;
+}
+.message{
+    text-align: justify;
+}
+.imgPostUser{
+    width: 50px;
+    height: 50px;
+    border-radius: 90%;
+    float: right;
+  }
