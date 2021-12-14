@@ -22,21 +22,23 @@ export default function Profile({currentUser, posts, handlePostDelete, handleLog
     let userPicture = userData[0]
     let userUsername = userData[1]
 
-    return(
-    <div>
+return(
+<div>
         {currentUser.id === parseInt(id) ? (
-        <div>    
+    <div>    
             <img className="profileImg" src={currentUser.picture} alt="userPicture"/> 
             <Link className="logoOverlap" to='/'><img src={logo} alt="Co-Lab"/></Link>
-            <div className="userInfo">
-            <h1>{currentUser.username}</h1> 
-            <Link to ='/create'><button>Create</button></Link> 
-            <div>
-                <button onClick={handleLogout}>Logout</button>
-            </div>
+        <div className="userInfo">
+                <h1>{currentUser.username}</h1> 
+                <Link to ='/create'><button>Create</button></Link> 
+                <div>
+                    <button onClick={handleLogout}>Logout</button>
+                </div>
+            <div className='postsOutter'>
+        
             {
             posts.map((post) =>(
-                <div key={post.id} className='posts'>
+                <div key={post.id} className='card'>
                 {currentUser?.id === post.user_id && (
                     <div>
                     <p>{post.message}</p>
@@ -50,20 +52,21 @@ export default function Profile({currentUser, posts, handlePostDelete, handleLog
                         </div> 
                     </div>)}              
                 </div>
-            ))}
-            </div> 
-        </div>  
+            ))
+            }
+            </div>
+        </div> 
+    </div>  
         ) : (
             <div>  
                 <img className="profileImg" src={userPicture} alt="userPicture"/>
                 <Link className="logoOverlap" to='/'><img src={logo} alt="Co-Lab"/></Link>
-            <div className="userInfo">
-                <h1>{userUsername}</h1>
-            </div>
-
-        </div> )
+                <div className="userInfo">
+                    <h1>{userUsername}</h1>
+                </div>
+            </div> )
 
         }
-    </div>
-    );
+</div>
+);
 }

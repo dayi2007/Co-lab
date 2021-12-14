@@ -1,4 +1,4 @@
-.postsInner{
+.card{
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -29,6 +29,7 @@
     flex-direction: column;
     align-content: flex-end;
     flex-wrap: nowrap;
+    align-items: center;
 }
 
 
@@ -53,7 +54,7 @@
   .card {
     width: var(--card-width);
     /* height: var(--card-height); */
-    padding: 3px;
+    padding: 30px;
     border-radius: 6px;
     cursor: pointer;
   }

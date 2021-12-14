@@ -11,11 +11,11 @@ const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
         <div className='postsOutter'>
         {
              posts?.map((post) =>(
-                <div key={post.id} className='postsInner' className="card">
+                <div key={post.id}className="card">
                     <div className="profileLink">
                         <Link to={`/users/${post.user_id}`} className="linkProfile">
                         <img className="imgPostUser" src={post.user.picture} alt="UserImage"/>
-                        <h9>{post.user.username}</h9> </Link>
+                        <h7>{post.user.username}</h7> </Link>
                     </div>
                     <div className="messagePicture">
                         <p className="message">{post.message}</p>

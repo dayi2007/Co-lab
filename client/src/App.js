@@ -69,6 +69,11 @@ function App() {
     await deletePost(id);
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
   };
+  posts.sort(function (a, b) {
+    let time1 = new Date(a.created_at);
+    let time2 = new Date(b.created_at);
+    return time2 - time1;
+  });
 
   return (
     <div> 
