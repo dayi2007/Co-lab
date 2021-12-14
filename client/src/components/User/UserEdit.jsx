@@ -19,7 +19,7 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
   const handleUserUpdate = async (id, formData) => {
     const newUser = await putUser(id, formData);
     setCurrentUser((prevState) =>
-      ( (user) => {
+      ((user) => {
         return user.id === Number(id) ? newUser : user;
       })
     );
