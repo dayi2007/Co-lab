@@ -49,7 +49,7 @@ return(
                     <div>
                     <p>{post.message}</p>
                     <img className="imgPost" src={post.picture} alt="userPicture"/>
-                    <h3>user: {post.user_id}</h3>                  
+                    <h3>user: {post.user.username}</h3>                  
                         <div className="editDelete"> 
                             <Link to={`/posts/${post.id}/edit`}>
                                 <button><img src={edit}/></button>

@@ -4,6 +4,7 @@ import Layout from "../../screens/Layout";
 import './PostList.css';
 import edit from '../../assets/edit.png';
 import trash from '../../assets/binPaper.png';
+import like from '../../assets/favorite.png';
 
 const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
     return(
@@ -20,15 +21,18 @@ const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
                     </div>
                     <div className="messagePicture">
                         <p className="message">{post.message}</p>
-                        <img className="imgPost" src={post.picture} alt="Post Img"/>    
+                        <img className="imgPost" src={post.picture} alt="Post Img"/>  
+                        <div className="iconsCard"> 
+                        <button><img src={like} alt="like"/></button> 
                         {currentUser?.id === post.user_id && (
                             <div className="editDelete"> 
                                 <Link to={`/posts/${post.id}/edit`}>
-                                    <button className="buttonEdit"><img src={edit}/></button>
+                                    <button className="buttonEdit"><img src={edit} alt="edit"/></button>
                                 </Link>                       
-                                <button className="buttonDeete" onClick={() => handlePostDelete(post.id)}><img src={trash}/></button>
+                                <button className="buttonDelete" onClick={() => handlePostDelete(post.id)}><img src={trash} alt="trash"/></button>
                             </div>                               
                         )} 
+                        </div>
                     </div>  
                 </div>
             ))   

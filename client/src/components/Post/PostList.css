@@ -29,6 +29,10 @@
     flex-wrap: nowrap;
     align-items: center;
 }
+.iconsCard{
+  display: flex;
+  justify-content: space-between;
+}
 
 
 /* magic card  */
@@ -37,7 +41,11 @@
     --card-height: 60vh;
     --card-width: calc(var(--card-height) / 1.5);
   }
-  
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
   
   .postsOutter {
     min-height: 100vh;
@@ -73,7 +81,7 @@
       z-index: -1;
       top: -1%;
       left: -2%;
-      animation: spin 2.5s linear infinite;
+      animation: spin 4.5s linear infinite;
   }
   
   .card::after {
@@ -90,7 +98,7 @@
       , #C0FDFF, #3c66e3c4 43%, #ECBCFD);
       opacity: 1;
     transition: opacity .5s;
-    animation: spin 2.5s linear infinite;
+    animation: spin 4.5s linear infinite;
   }
   
   @keyframes spin {
