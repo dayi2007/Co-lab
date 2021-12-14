@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from '../components/Nav';
-import { input } from 'materialize-css';
+import './LogIn.css'
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -22,11 +22,12 @@ export default function Login(props) {
   return (
   <div>
     <Nav />
+    <div  className="card" id="cardLogin">
     <form onSubmit={(e)=> {
       e.preventDefault();
       handleLogin(formData);
     }}>
-    <div className="input-field">
+      <label>
         <input
           id="username"
           class="validate"
@@ -35,10 +36,10 @@ export default function Login(props) {
           name='username'
           value={username}
           onChange={handleChange}/>
-        <label for="username">Username </label>
-      </div>
+          Username
+      </label>
       <br />
-      <div className="input-field">      
+      <label for="password">      
         <input
           id="password"
           class="validate"
@@ -46,8 +47,7 @@ export default function Login(props) {
           name='password'
           value={password}
           onChange={handleChange} />
-        <label for="password">Password </label>
-      </div>
+        Password </label>
       <br/>
       <br/>
       <div>
@@ -56,6 +56,7 @@ export default function Login(props) {
     </form>
     <br />
     <Link to='/singup'>SignUp</Link>
+    </div>
   </div>
   );
 }

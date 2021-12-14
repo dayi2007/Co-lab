@@ -6,8 +6,6 @@
     align-items: stretch;
     flex-wrap: wrap;
     margin: 1em 2vw 2em 2vw;
-    /* border: 1px solid rgb(209, 209, 209);
-    padding: 3vh;*/
 }
 .imgPost{
     max-width: 70vw;
@@ -63,11 +61,6 @@
     color: rgb(88 199 250 / 100%);
     transition: color 1s;
   }
-  /* .card:hover:before, .card:hover:after {
-    animation: none;
-    opacity: 1;
-  }
-     */
   .card::before {
     content: "";
     width: 104%;
@@ -75,7 +68,7 @@
     border-radius: 8px;
     background-image: linear-gradient(
       var(--rotate)
-      , #C0FDFF, #3c66e3c4 43%, #ECBCFD);
+      ,#3c66e37c, #C0FDFF 43%,  #e5a3fd);
       position: absolute;
       z-index: -1;
       top: -1%;
@@ -84,9 +77,6 @@
   }
   
   .card::after {
-    /* position: absolute; */
-    /* content: ""; */
-    /* top: calc(var(--card-height) / 6); */
     left: 4vw;
     right: 0;
     z-index: -1;

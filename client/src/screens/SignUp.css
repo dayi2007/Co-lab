@@ -1,0 +1,9 @@
+#cardSignUp{
+    margin-top: 10vh;
+    margin-left: 7vw;
+    padding-top: 7vh;
+    height: var(--card-height);
+  }
+  .uploadProfilePicture{
+      border-radius: 90%;
+  }

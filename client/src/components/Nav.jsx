@@ -1,4 +1,4 @@
-import logo from '../assets/logoSmall.png';
+import logo from '../assets/logoClear.png';
 import { Link } from 'react-router-dom';
 
 export default function Nav({currentUser, handleLogout}) {

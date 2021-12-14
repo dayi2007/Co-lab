@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from '../assets/logoSmall.png';
+import logo from '../assets/logoClear.png';
 import './Profile.css'
 import { useParams } from "react-router";
 

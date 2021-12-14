@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Nav from '../components/Nav';
+import './SignUp.css'
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -22,12 +23,23 @@ export default function Register(props) {
   return (
     <div>
     <Nav />
+    <div className="card" id="cardSignUp">
     <form
       onSubmit={(e) => {
         e.preventDefault();
         handleSignUp(formData);
       }}
     >
+      <label className="uploadProfilePicture">
+        Profile Picture:
+        <input
+          type='url'
+          name='picture'
+          value={picture}
+          onChange={handleChange}
+        />
+      </label>
+      <br/>
       <label>
         Username:
         <input
@@ -58,18 +70,9 @@ export default function Register(props) {
         />
       </label>
       <br />
-      <label>
-        Picture:
-        <input
-          type='url'
-          name='picture'
-          value={picture}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
       <button>Co-Lab</button>
     </form>
+    </div>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../../screens/Layout";
-import Footer from "../Footer";
 import './PostList.css';
 
 const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
@@ -36,7 +35,6 @@ const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
        <Link to ={currentUser ? '/create' : '/login'}>
         <button>Create</button></Link> 
       </Layout>
-      {/* <Footer /> */}
     </div>
     )
 }
