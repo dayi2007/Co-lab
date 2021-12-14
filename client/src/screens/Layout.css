@@ -1,0 +1,57 @@
+.profilePicBorder{
+  width: 85px;
+  height: 85px;
+  border-radius: 90px;
+  background: linear-gradient(0.80turn,  #c0fdffb2,  #FFCBF2, #c8e7ff98);
+  backdrop-filter: blur(180px);
+  /* margin: auto; */
+  margin: 4px 6px 4px 0px;
+  float: right;
+}
+
+.profileWhite{
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.507);
+  border-radius: 90px;
+  margin: auto;
+  top: 7px;
+  position: relative;
+}
+.profilePicture{
+  width: 70px;
+  height: 70px;
+  border-radius: 90%;
+}
+.loginLink{
+  top: 20px;
+  left: 14px;
+  position: relative;
+  text-decoration: none;
+}
+.logoTop{
+  display: flex;
+  justify-content: center;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(50px);
+  background: linear-gradient(0.70turn,  #c0fdff3b,  #ffcbf23b, #c8e7ff3d);
+  border-radius: 20px 20px 0 0;
+}
+.currentUser{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.userName{
+  margin: 20px 0 0 30px;
+  position: absolute;
+}
+.copy{
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 0%;
+}

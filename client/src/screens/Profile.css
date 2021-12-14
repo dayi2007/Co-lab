@@ -1,0 +1,37 @@
+.profileImg{
+    width: 210vw;
+    height: 120vh;
+    align-items: center;
+    position: absolute;
+    left: -140px;
+    top: -25px;
+    z-index: 1;
+
+}
+.logoOverlap img{
+    position: relative;
+    width: 114px;
+    height: 76px;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    /* background-color: rgba(228, 145, 224, 0.281); */
+    /* background-color: #C0FDFF, #3c66e3c4 43%, #ECBCFD; */
+}
+.userInfo{
+    position: relative;
+    height: 50vh;
+    margin-top: 75vh;
+    border-radius: 20px;
+    background-color: #ffffff;
+    z-index: 2;
+}
+button img{
+    width: 8vw;
+    height: 4vh;
+}
+button{
+    background-color: transparent;
+    border: none;
+}
