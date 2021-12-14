@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export default function Footer({currentUser}){
    return(
-    <footer>
+    <footer className="footer">
       {currentUser ? (
           <div className="currentUser">
             <Link to={`/users/${currentUser.id}`}>

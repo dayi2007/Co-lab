@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../../screens/Layout";
+import Footer from "../Footer";
 import './PostList.css';
 
 const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
     return(
     <div>
         <Layout currentUser={currentUser} handleLogout={handlePostDelete} handleLogout={handleLogout}>
+        <div className='postsOutter'>
         {
              posts?.map((post) =>(
-                <div key={post.id} className='posts'>
+                <div key={post.id} className='postsInner' className="card">
                     <div>
                     <Link to={`/users/${post.user_id}`} className="linkProfile">
                     <img className="imgPostUser" src={post.user.picture} alt="UserImage"/>
@@ -28,9 +30,11 @@ const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
             </div>
             ))   
         }
+        </div>
        <Link to ={currentUser ? '/create' : '/login'}>
         <button>Create</button></Link> 
       </Layout>
+      {/* <Footer /> */}
     </div>
     )
 }
