@@ -19,13 +19,16 @@ export default function Profile({currentUser, posts, handlePostDelete, handleLog
    const newId = newUsers.find(element => element === parseInt(id))
 
     let userData =[]
+    let userPosts =[]
     posts.map((post) => (
         newId === post.user.id && (
-          userData.push(post.user.picture, post.user.username)
+          userData.push(post.user.picture, post.user.username) &&
+          userPosts.push(post)
         )))
   
     let userPicture = userData[0]
     let userUsername = userData[1]
+    console.log(userPosts)
 
 return(
 <div>
@@ -70,6 +73,25 @@ return(
                 <div className="userInfo">
                     <h1>{userUsername}</h1>
                 </div>
+                {
+            userPosts.map((post) =>(
+                <div key={post.id} className='card'>
+                    {post}
+                {/* {newId?.id === post.user_id && (
+                    <div>
+                    <p>{post.message}</p>
+                    <img className="imgPost" src={post.picture} alt="userPicture"/>
+                    <h3>user: {post.user.username}</h3>                  
+                        <div className="editDelete"> 
+                            <Link to={`/posts/${post.id}/edit`}>
+                                <button><img src={edit}/></button>
+                            </Link>                       
+                            <button onClick={() => handlePostDelete(post.id)}><img src={trash}/></button>
+                        </div> 
+                    </div>)}               */}
+                </div>
+            ))
+            }
             </div> )
 
         }

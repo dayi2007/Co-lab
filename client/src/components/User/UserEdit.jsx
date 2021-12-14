@@ -19,7 +19,7 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
   const handleUserUpdate = async (id, formData) => {
     const newUser = await putUser(id, formData);
     setCurrentUser((prevState) =>
-      prevState.map((user) => {
+      ( (user) => {
         return user.id === Number(id) ? newUser : user;
       })
     );
@@ -54,7 +54,7 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
     >
       <label>
         <input type='text' name='username' placeholder="Cange your Username" value={username} onChange={handleChange} />
-        <input type='text' name='picture' placeholder="Cange your Picture" value={picture} required autoFocus onChange={handleChange} />
+        <input type='text' name='picture' placeholder="Cange your Picture" value={picture} onChange={handleChange} />
       </label>
       <button className="buttonLogo"><img src={logo}/></button>
     </form>
