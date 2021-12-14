@@ -16,7 +16,8 @@
     top: 0px;
     z-index: 2;
     backdrop-filter: blur(80px);
-    background-color: rgba(228, 145, 224, 0.281);
+    /* background-color: rgba(228, 145, 224, 0.281); */
+    background-color: #C0FDFF, #3c66e3c4 43%, #ECBCFD;
 }
 .userInfo{
     position: relative;
