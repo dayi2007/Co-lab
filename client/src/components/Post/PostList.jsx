@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../../screens/Layout";
 import './PostList.css';
+import edit from '../../assets/edit.png';
+import trash from '../../assets/binPaper.png';
 
 const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
     return(
@@ -22,9 +24,9 @@ const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
                         {currentUser?.id === post.user_id && (
                             <div className="editDelete"> 
                                 <Link to={`/posts/${post.id}/edit`}>
-                                    <button>Edit</button>
+                                    <button className="buttonEdit"><img src={edit}/></button>
                                 </Link>                       
-                                <button onClick={() => handlePostDelete(post.id)}>Delete</button>
+                                <button className="buttonDeete" onClick={() => handlePostDelete(post.id)}><img src={trash}/></button>
                             </div>                               
                         )} 
                     </div>  

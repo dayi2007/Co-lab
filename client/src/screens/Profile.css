@@ -1,9 +1,9 @@
 .profileImg{
     width: 210vw;
-    height: 100vh;
+    height: 120vh;
     align-items: center;
     position: absolute;
-    left: -190px;
+    left: -140px;
     top: -25px;
     z-index: 1;
 

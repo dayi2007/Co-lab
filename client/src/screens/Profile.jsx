@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import logo from '../assets/logoClear.png';
 import './Profile.css'
 import { useParams } from "react-router";
+import edit from '../assets/edit.png';
+import trash from '../assets/binPaper.png';
 
 export default function Profile({currentUser, posts, handlePostDelete, handleLogout }){
     console.log(currentUser.id)
@@ -31,6 +33,7 @@ return(
         <div className="userInfo">
                 <h1>{currentUser.username}</h1> 
                 <Link to ='/create'><button>Create</button></Link> 
+                <Link to={`/users/${newId}/edit`}> <button>Update Profile</button></Link>
                 <div>
                     <button onClick={handleLogout}>Logout</button>
                 </div>
@@ -46,9 +49,9 @@ return(
                     <h3>user: {post.user_id}</h3>                  
                         <div className="editDelete"> 
                             <Link to={`/posts/${post.id}/edit`}>
-                                <button>Edit</button>
+                                <button><img src={edit}/></button>
                             </Link>                       
-                            <button onClick={() => handlePostDelete(post.id)}>Delete</button>
+                            <button onClick={() => handlePostDelete(post.id)}><img src={trash}/></button>
                         </div> 
                     </div>)}              
                 </div>

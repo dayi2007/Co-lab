@@ -15,7 +15,7 @@ export default function PostEdit({ posts, handlePostUpdate }) {
   useEffect(() => {
     const prefillFormData = () => {
       const postItem = posts.find((post) => post.id === Number(id));
-      setFormData({ message: postItem.message });
+      setFormData({ message: postItem.message, picture: postItem.picture });
     };
     if (posts.length) prefillFormData();
   }, [posts, id]);
