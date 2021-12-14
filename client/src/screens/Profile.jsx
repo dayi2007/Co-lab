@@ -4,6 +4,9 @@ import './Profile.css'
 import { useParams } from "react-router";
 import edit from '../assets/edit.png';
 import trash from '../assets/binPaper.png';
+import addNew from '../assets/messagesAdd.png';
+import logout from '../assets/logout.png';
+import update from '../assets/update.png';
 
 export default function Profile({currentUser, posts, handlePostDelete, handleLogout }){
     console.log(currentUser.id)
@@ -32,10 +35,10 @@ return(
             <Link className="logoOverlap" to='/'><img src={logo} alt="Co-Lab"/></Link>
         <div className="userInfo">
                 <h1>{currentUser.username}</h1> 
-                <Link to ='/create'><button>Create</button></Link> 
-                <Link to={`/users/${newId}/edit`}> <button>Update Profile</button></Link>
+                <Link to ='/create'><button><img src={addNew} alt="create"/></button></Link> 
+                <Link to={`/users/${newId}/edit`}> <button><img src={update} alt="update"/></button></Link>
                 <div>
-                    <button onClick={handleLogout}>Logout</button>
+                    <button onClick={handleLogout}><img src={logout} alt="logout"/></button>
                 </div>
             <div className='postsOutter'>
         

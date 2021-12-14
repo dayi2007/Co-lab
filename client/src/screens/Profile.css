@@ -27,3 +27,11 @@
     background-color: #ffffff;
     z-index: 2;
 }
+button img{
+    width: 8vw;
+    height: 4vh;
+}
+button{
+    background-color: transparent;
+    border: none;
+}
