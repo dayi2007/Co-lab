@@ -127,7 +127,16 @@
       max-height: 40rem;
   } 
   .postsOutter{
-    /* background-color: rgba(238, 130, 238, 0.39); */
     padding-top: 10rem;
   }
+}
+@media (min-width: 900px) and (max-width: 1039px) {
+  .imgPost{
+    max-width: 32rem;
+    max-height: 40rem;
+} 
+.postsOutter{
+  padding-top: 10rem;
+}
+
 }

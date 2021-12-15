@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Josefin+Sans&family=Montserrat&family=Raleway:ital@1&display=swap');
+
 .profileImg{
     width: 210vw;
     height: 120vh;
@@ -23,9 +25,11 @@
 .userInfo{
     position: relative;
     margin-top: 75vh;
-    border-radius: 20px 20px 0 0;
+    border-radius: 30px 30px 0 0;
     background-color: #67f6fb9b;
     z-index: 2;
+    letter-spacing: 0.5px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 button img{
     height: 4vh;
@@ -33,6 +37,9 @@ button img{
 button{
     background-color: transparent;
     border: none;
+}
+button:hover{
+     transform: scale(1.1);   
 }
 .postsOutterUser {
     min-height: 100vh;
@@ -75,15 +82,24 @@ button{
    
 
 .profileImg{
-    left: -46.2rem;
+    width: 100vw;
+    left: 0;
+}
+.userInfo{
+    margin-top: 50rem;
 }
 }
-@media (min-width: 800px) and (max-width: 1039px) {
+@media (min-width: 900px) and (max-width: 1039px) {
    
 
 .profileImg{
-    left: -36rem;
-    top: 0px;
-    right: 10rem;
+     left: -40rem;
+}
+.userInfo{
+    margin-top: 40em;
+}
+.classesUser{
+    padding-left: 200px;
+    padding-right: 180px;
 }
 }
