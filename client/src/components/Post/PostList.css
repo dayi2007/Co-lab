@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Josefin+Sans&family=Montserrat&family=Raleway:ital@1&display=swap');
+
 .card{
     display: flex;
     flex-direction: column;
@@ -13,8 +15,13 @@
     align-self: center;
 }
 .message{
-    text-align: justify;
-    letter-spacing: 0.05rem;
+  text-align: justify;
+  /* letter-spacing: 0.05rem; */
+  letter-spacing: 0.5px;
+  /* font-family: 'Baloo Bhaijaan 2', cursive; */
+  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  /* font-family: 'Raleway', sans-serif; */
 }
 .imgPostUser{
     width: 50px;
