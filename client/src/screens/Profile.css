@@ -23,7 +23,7 @@
     position: relative;
     height: 50vh;
     margin-top: 75vh;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     background-color: #ffffff;
     z-index: 2;
 }
@@ -37,16 +37,25 @@ button{
 }
 .postsOutterUser {
     min-height: 100vh;
-    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 2rem;
     padding-bottom: 2rem;
     box-sizing: border-box;
-    top: -40vh;
-    z-index: 2;
-  }
-  .nameUser{
+}
+.nameUser{
       padding: 15px 0 0 15px;
-  }
+}
+.addUser{
+    padding: 15px 15px 0 0;
+}
+.profileButtons{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 0 15px ;
+}
+.headerUser{
+    display: flex;
+    justify-content: space-between;
+}
