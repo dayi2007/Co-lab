@@ -33,6 +33,9 @@
   display: flex;
   justify-content: center;
 }
+.logoTop:hover{
+  transform: scale(1.1);
+}
 footer{
   position: fixed;
   bottom: 0;
@@ -68,6 +71,11 @@ footer{
   background: linear-gradient(0.70turn,  #c0fdff3b,  #ffcbf23b, #c8e7ff3d);
   border-radius: 20px 20px 0 0;
   z-index: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
 .footer{
   display: none;
@@ -76,11 +84,10 @@ footer{
   display: none;
 }
 .userName{
-  margin: 0;
-  position: relative;
+display: none;
 }
 .currentUser{
-  display: flex;
+  display: inline;
 }
 
 }

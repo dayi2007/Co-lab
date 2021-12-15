@@ -129,6 +129,7 @@
       max-height: 40rem;
   } 
   .postsOutter{
-    background-color: rgba(238, 130, 238, 0.39);
+    /* background-color: rgba(238, 130, 238, 0.39); */
+    padding-top: 10rem;
   }
 }
