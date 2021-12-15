@@ -92,7 +92,7 @@ function App() {
             <PostCreate handlePostCreate={handlePostCreate} toggleFetch={toggleFetch} setToggleFetch={setToggleFetch} /> 
           </Route>
           <Route path='/posts/:id/edit'>
-            <PostEdit posts={posts} handlePostUpdate={handlePostUpdate} />
+            <PostEdit posts={posts} currentUser={currentUser} handlePostUpdate={handlePostUpdate} />
           </Route>
           <Route path='/users/:id/edit'>
             <UserEdit currentUser={currentUser} setCurrentUser={setCurrentUser} />

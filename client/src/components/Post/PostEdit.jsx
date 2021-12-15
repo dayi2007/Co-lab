@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import logo from '../../assets/logoSmall.png';
-import Layout from '../../screens/Layout'
+import Nav from '../Nav';
 import './PostEdit.css'
 
-export default function PostEdit({ posts, handlePostUpdate }) {
+export default function PostEdit({ posts, handlePostUpdate, currentUser }) {
   const [formData, setFormData] = useState({
     message: '',
     picture: '',
@@ -30,7 +30,7 @@ export default function PostEdit({ posts, handlePostUpdate }) {
 
   return (
   <div>
-    <Layout>
+    <Nav/>
     <div className="card" id="cardPostEdit">
     <form
       onSubmit={(e) => {
@@ -45,7 +45,6 @@ export default function PostEdit({ posts, handlePostUpdate }) {
       <button className="buttonLogo"><img src={logo}/></button>
     </form>
     </div>
-    </Layout>
   </div>
   );
 }

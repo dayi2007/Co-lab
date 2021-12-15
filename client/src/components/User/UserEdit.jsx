@@ -14,25 +14,19 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
   const { username, picture } = formData;
   const { id } = useParams();
   const history = useHistory();
-  const [users, setUsers] =useState([]);
 
   const handleUserUpdate = async (id, formData) => {
     const newUser = await putUser(id, formData);
-    setCurrentUser((prevState) =>
-      prevState.map((user) => {
-        return user.id === Number(id) ? newUser : user;
-      })
-    );
+    setCurrentUser(newUser)
     history.push('/');
   };
 
   useEffect(() => {
     const prefillFormData = () => {
-      const userItem = users.find((user) => user.id === Number(id));
-      setFormData({ username: userItem.username, picture: userItem.picture });
+      setFormData({ username: currentUser.username, picture: currentUser.picture });
     };
-    if (users.length) prefillFormData();
-  }, [users, id]);
+    if (currentUser) prefillFormData();
+  }, [currentUser, id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,10 +37,11 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
   };
 
   return (
-  <div>
+  <div className="card" id="cardUserEdit">
     <Nav/>
-    <div className="card" id="cardUserEdit">
+    <div>
     <form
+     id="labelUserEdit"
       onSubmit={(e) => {
         e.preventDefault();
         handleUserUpdate(id, formData);
@@ -56,7 +51,7 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
         <input type='text' name='username' placeholder="Cange your Username" value={username} onChange={handleChange} />
         <input type='text' name='picture' placeholder="Cange your Picture" value={picture} required autoFocus onChange={handleChange} />
       </label>
-      <button className="buttonLogo"><img src={logo}/></button>
+      <button className="buttonLogoEdit"><img src={logo}/></button>
     </form>
     </div>
   </div>

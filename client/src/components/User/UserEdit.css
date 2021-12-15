@@ -1,5 +1,37 @@
 #cardUserEdit{
-    margin-top: 15vh;
+    margin-top: 10vh;
     margin-left: 7vw;
     height: var(--card-height);
+    justify-content: center;
+}
+#labelUserEdit{
+    padding: 50px 30px 0 30px;
+}
+.buttonLogoEdit img{
+    /* background-color: turquoise; */
+    width: 10em;
+    height: 10em;
+    align-content: center;
+    align-items: center;
+}
+.classesUser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2em;
+}
+.nameUserProfile{
+    position: relative;
+    padding-top: 25px;
+    padding-left: 10px;
+    margin: 0;
+}
+.classesh5{
+    position: relative;
+    margin: 0 0 0 0;
+    padding-top: 15px;
+}
+.classesImg{
+    padding-right: 1em;
 }
