@@ -33,12 +33,14 @@ export default function Profile({currentUser, posts, handlePostDelete, handleLog
     console.log(userPosts)
 
 return(
-<div>
+<div className="profileContainer">
     {
     currentUser.id === parseInt(id) ? (
-    <div>    
+    <div> 
+        <div>   
         <img className="profileImg" src={currentUser.picture} alt="userPicture"/> 
         <Link className="logoOverlap" to='/'><img src={logo} alt="Co-Lab"/></Link>
+        </div>
         <div className="userInfo">
             <div className="classesUser">
                 <div>

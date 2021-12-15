@@ -3,20 +3,19 @@ import { Link } from 'react-router-dom';
 
 export default function Nav({currentUser, handleLogout}) {
     return(
-      <header>
+      <header className="headerDesktop">
         <Link className="logoTop" to='/'><img src={logo} alt="Co-Lab"/></Link>
-        {/* {currentUser ? (
-          <div>
+        {currentUser ? (
+          <div className="currentUser">
+            <Link to={`/users/${currentUser.id}`}>
+              <div className="userName">
+            <h5 >Welcome, {currentUser.username}</h5></div>
             <div className="profilePicBorder">
                 <div className="profileWhite">
-                    <img className="profilePicture" src={currentUser.picture} alt="user-picture"/>
+                    <img className="profilePicture" src={currentUser.picture} alt="user-picture"/> 
                 </div>
-              <div>
-                <p>{currentUser.username}</p>
-                <button onClick={handleLogout}>Logout</button>
-              </div>
             </div>
-            <p>Welcome, {currentUser.username} {currentUser.id}</p>
+            </Link>
           </div>
         ) : (
           <div className="profilePicBorder">
@@ -25,7 +24,7 @@ export default function Nav({currentUser, handleLogout}) {
             </div>
           </div>          
         )}
-        {currentUser && (
+        {/* {currentUser && (
           <nav>
             <Link to='/create'>|Star-create|</Link>
           </nav>
