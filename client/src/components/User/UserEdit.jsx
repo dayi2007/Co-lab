@@ -17,15 +17,7 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
 
   const handleUserUpdate = async (id, formData) => {
     const newUser = await putUser(id, formData);
-<<<<<<< HEAD
-    setCurrentUser((prevState) =>
-      ((user) => {
-        return user.id === Number(id) ? newUser : user;
-      })
-    );
-=======
     setCurrentUser(newUser)
->>>>>>> b0826360545af532038c7a2a99dc03f43f22ca84
     history.push('/');
   };
 
