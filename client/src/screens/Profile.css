@@ -45,10 +45,10 @@ button{
     box-sizing: border-box;
 }
 .nameUser{
-      padding: 15px 0 0 15px;
+      padding: 1px 0 0 30px;
 }
 .addUser{
-    padding: 15px 15px 0 0;
+    padding: 30px 20px 0 0;
 }
 .profileButtons{
     display: flex;
