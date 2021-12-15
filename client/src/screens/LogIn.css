@@ -2,3 +2,10 @@
   margin-top: 15vh;
   margin-left: 7vw;
 }
+.loginButton{
+    margin: auto;
+    display: block;
+}
+.singupLink{
+  text-align: end;
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Nav from '../components/Nav';
-import './SignUp.css'
+import './SignUp.css';
+import logo from '../assets/forButton.png';
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -70,7 +71,7 @@ export default function Register(props) {
         />
       </label>
       <br />
-      <button>Co-Lab</button>
+      <button className="signupButton"><img src={logo} alt="Co-Lab"/></button>
     </form>
     </div>
     </div>

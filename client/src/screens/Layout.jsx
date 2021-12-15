@@ -8,7 +8,7 @@ export default function Layout({ currentUser, handleLogout, children }) {
   
   return (
     <main>
-      <Link className="logoTop" id="noShow" to='/'><img src={logo} alt="Co-Lab"/></Link>
+      {/* <Link className="logoTop" id="noShow" to='/'><img src={logo} alt="Co-Lab"/></Link> */}
       <Nav currentUser={currentUser} handleLogout={handleLogout}/>      
         {children}
       <Footer currentUser={currentUser}/>

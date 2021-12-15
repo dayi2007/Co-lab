@@ -7,3 +7,8 @@
   .uploadProfilePicture{
       border-radius: 90%;
   }
+  .signupButton{
+    margin: auto;
+    display: block;
+    padding-top: 8vh ;
+  }

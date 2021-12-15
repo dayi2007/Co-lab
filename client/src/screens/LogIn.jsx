@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from '../components/Nav';
 import './LogIn.css'
+import logo from '../assets/forButton.png';
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -51,11 +52,11 @@ export default function Login(props) {
       <br/>
       <br/>
       <div>
-      <button>Co-Lab</button>
+      <button className="loginButton"><img src={logo} alt="Co-Lab"/></button>
       </div>
     </form>
     <br />
-    <Link to='/singup'>SignUp</Link>
+    <Link className="singupLink" to='/singup'>SignUp</Link>
     </div>
   </div>
   );

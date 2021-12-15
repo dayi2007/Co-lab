@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function Nav({currentUser, handleLogout}) {
     return(
-      <header className="headerDesktop">
+      <header>
         <Link className="logoTop" to='/'><img src={logo} alt="Co-Lab"/></Link>
+        <div  className="headerDesktop">
         {currentUser ? (
           <div className="currentUser">
             <Link to={`/users/${currentUser.id}`}>
@@ -29,6 +30,7 @@ export default function Nav({currentUser, handleLogout}) {
             <Link to='/create'>|Star-create|</Link>
           </nav>
         )} */}
+        </div>
       </header>
 );
 
