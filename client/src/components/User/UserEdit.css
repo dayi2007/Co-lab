@@ -1,21 +1,37 @@
 #cardUserEdit{
-    margin-top: 15vh;
+    margin-top: 10vh;
     margin-left: 7vw;
     height: var(--card-height);
+    justify-content: center;
 }
 #labelUserEdit{
-    padding: 50px;
-    /* background-color: tomato; */
+    padding: 50px 30px 0 30px;
 }
 .buttonLogoEdit img{
-    background-color: turquoise;
+    /* background-color: turquoise; */
+    width: 10em;
+    height: 10em;
+    align-content: center;
+    align-items: center;
 }
-input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
-    border-bottom: 5
-    px
-     solid #c71a1a;
+.classesUser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2em;
 }
-
-input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
-    border-bottom: 5 px solid #c71a1a;
+.nameUserProfile{
+    position: relative;
+    padding-top: 25px;
+    padding-left: 10px;
+    margin: 0;
+}
+.classesh5{
+    position: relative;
+    margin: 0 0 0 0;
+    padding-top: 15px;
+}
+.classesImg{
+    padding-right: 1em;
 }

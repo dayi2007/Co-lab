@@ -9,19 +9,19 @@ import logout from '../assets/logout.png';
 import update from '../assets/update.png';
 import like from '../assets/favorite.png';
 import add from '../assets/star.png';
+import classes from '../assets/classes.png';
 
 export default function Profile({currentUser, posts, handlePostDelete, handleLogout }){
-    console.log(currentUser.id)
     const { id } = useParams()
-
-   let newUsers =[]
+    let newUsers =[]
+    let userData =[]
+    let userPosts =[]
+    window.scrollTo(0, 0)
     posts.map((post) =>(
         newUsers.push(post.user.id)
     ))
    const newId = newUsers.find(element => element === parseInt(id))
 
-    let userData =[]
-    let userPosts =[]
     posts.map((post) => (
         newId === post.user.id && (
           userData.push(post.user.picture, post.user.username) &&
@@ -39,7 +39,15 @@ return(
         <img className="profileImg" src={currentUser.picture} alt="userPicture"/> 
         <Link className="logoOverlap" to='/'><img src={logo} alt="Co-Lab"/></Link>
         <div className="userInfo">
-            <h1 className="nameUser">{currentUser.username}</h1> 
+            <div className="classesUser">
+                <div>
+                    <h1 className="nameUserProfile">{currentUser.username}</h1>
+                </div>
+                <div>
+                    <h5 className="classesh5">Classes:</h5> 
+                    <img className="classesImg" src={classes} alt="classes"/>
+                </div>
+            </div>
             <div className="profileButtons">
                 <div>
                     <Link to ='/create'><button><img src={create} alt="create"/></button></Link> 
@@ -82,10 +90,17 @@ return(
         <img className="profileImg" src={userPicture} alt="userPicture"/>
         <Link className="logoOverlap" to='/'><img src={logo} alt="Co-Lab"/></Link>
         <div className="userInfo">
-            <div className="headerUser">
-                <h1 className="nameUser">{userUsername}</h1>
+            <div className="classesUser">
+                <div>
+                    <h1 className="nameUserProfile">{userUsername}</h1>
+                </div>
+                
+                <div>
                 <button className="addUser"><img src={add} alt="add"/> </button>
-            </div>        
+                    <h5 className="classesh5">Classes:</h5> 
+                    <img className="classesImg" src={classes} alt="classes"/>
+            </div>
+            </div>
         <div className='postsOutterUser'>                
             {
             userPosts.map((post) =>( 

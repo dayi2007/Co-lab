@@ -37,9 +37,9 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
   };
 
   return (
-  <div>
+  <div className="card" id="cardUserEdit">
     <Nav/>
-    <div className="card" id="cardUserEdit">
+    <div>
     <form
      id="labelUserEdit"
       onSubmit={(e) => {
