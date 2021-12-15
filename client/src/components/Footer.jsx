@@ -12,10 +12,8 @@ export default function Footer({currentUser}){
                 <div className="profileWhite">
                     <img className="profilePicture" src={currentUser.picture} alt="user-picture"/> 
                 </div>
-                {/* <h7 className="userName">{currentUser.username}</h7> */}
             </div>
             </Link>
-            {/* <p>Welcome, {currentUser.username}</p> */}
           </div>
         ) : (
           <div className="profilePicBorder">

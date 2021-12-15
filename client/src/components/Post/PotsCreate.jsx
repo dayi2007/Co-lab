@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from '../../assets/logoSmall.png';
+import Nav from '../Nav';
 
 export default function PostCreate({ handlePostCreate, toggleFetch, setToggleFetch }) {
   const [formData, setFormData] = useState({
@@ -18,6 +19,8 @@ export default function PostCreate({ handlePostCreate, toggleFetch, setToggleFet
   };
 
   return (
+  <div className="card">
+    <Nav/>
     <form
       onSubmit={(e) => {
         e.preventDefault();
@@ -31,5 +34,6 @@ export default function PostCreate({ handlePostCreate, toggleFetch, setToggleFet
       </label>
       <button className="buttonLogo"><img src={logo}/></button>
     </form>
+  </div>
   );
 }

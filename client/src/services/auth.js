@@ -15,10 +15,8 @@ export const registerUser = async (registerData) => {
 };
 
 export const putUser = async (id, registerData) => {
-    const resp = await  api.put(`users/${id}`, {user: registerData});
-    // localStorage.setItem('authToken', resp.data.token);
-    api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
-    return resp.data.user;
+    const resp = await  api.put(`users/${id}`, {user: registerData});    
+    return resp.data;
 };
 
 export const verifyUser = async () => {

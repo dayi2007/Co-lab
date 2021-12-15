@@ -23,15 +23,39 @@
     position: relative;
     height: 50vh;
     margin-top: 75vh;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     background-color: #ffffff;
     z-index: 2;
 }
 button img{
-    width: 8vw;
+    width: 9vw;
     height: 4vh;
 }
 button{
     background-color: transparent;
     border: none;
+}
+.postsOutterUser {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+}
+.nameUser{
+      padding: 1px 0 0 30px;
+}
+.addUser{
+    padding: 30px 20px 0 0;
+}
+.profileButtons{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 0 15px ;
+}
+.headerUser{
+    display: flex;
+    justify-content: space-between;
 }
