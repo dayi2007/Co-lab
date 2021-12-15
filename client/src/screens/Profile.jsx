@@ -30,7 +30,6 @@ export default function Profile({currentUser, posts, handlePostDelete, handleLog
   
     let userPicture = userData[0]
     let userUsername = userData[1]
-    console.log(userPosts)
 
 return(
 <div className="profileContainer">

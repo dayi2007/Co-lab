@@ -43,6 +43,7 @@ footer{
   backdrop-filter: blur(50px);
   background: linear-gradient(0.70turn,  #c0fdff3b,  #ffcbf23b, #c8e7ff3d);
   border-radius: 20px 20px 0 0;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .currentUser{
   display: flex;
@@ -52,6 +53,7 @@ footer{
 .userName{
   margin: 20px 0 0 30px;
   position: absolute;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .copy{
   text-align: center;

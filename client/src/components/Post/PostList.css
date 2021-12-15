@@ -8,6 +8,7 @@
     align-items: stretch;
     flex-wrap: wrap;
     margin: 1em 2vw 2em 2vw;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .imgPost{
     max-width: 70vw;
@@ -18,10 +19,7 @@
   text-align: justify;
   /* letter-spacing: 0.05rem; */
   letter-spacing: 0.5px;
-  /* font-family: 'Baloo Bhaijaan 2', cursive; */
   font-family: 'Josefin Sans', sans-serif;
-  /* font-family: 'Montserrat', sans-serif; */
-  /* font-family: 'Raleway', sans-serif; */
 }
 .imgPostUser{
     width: 50px;
