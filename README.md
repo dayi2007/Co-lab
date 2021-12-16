@@ -138,11 +138,11 @@ src
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | README              |    L     |     3 hrs      |     3 hrs     |    3 hrs    |
-| Post                |    H     |     6 hrs      |     0 hrs     |     TBD     |
-| Edit                |    H     |     4 hrs      |     0 hrs     |     TBD     |
-| Search              |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Comments            |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Sort                |    H     |     2 hrs      |     0 hrs     |     TBD     |
+| Post                |    H     |     6 hrs      |     0 hrs     |    7 hr     |
+| Edit                |    H     |     4 hrs      |     0 hrs     |    3 hr     |
+| Search              |    H     |     3 hrs      |     0 hrs     |     n/a     |
+| Comments            |    H     |     3 hrs      |     0 hrs     |     n/a     |
+| Sort                |    H     |     2 hrs      |     0 hrs     |     n/a     |
 | LogIn               |    H     |     2 hrs      |     0 hrs     |     TBD     |
 | Home                |    H     |     5 hrs      |     0 hrs     |     TBD     |
 | Profile             |    H     |     3 hrs      |     0 hrs     |     TBD     |
