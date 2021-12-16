@@ -32,12 +32,14 @@ export default function Profile({currentUser, posts, handlePostDelete, handleLog
     let userUsername = userData[1]
 
 return(
-<div>
+<div className="profileContainer">
     {
     currentUser.id === parseInt(id) ? (
-    <div>    
+    <div> 
+        <div>   
         <img className="profileImg" src={currentUser.picture} alt="userPicture"/> 
         <Link className="logoOverlap" to='/'><img src={logo} alt="Co-Lab"/></Link>
+        </div>
         <div className="userInfo">
             <div className="classesUser">
                 <div>
@@ -65,7 +67,7 @@ return(
                         <div className="profileLink">
                         <div className="linkProfile">
                             <img  className="imgPostUser" src={post.user.picture} alt="UserImage"/>
-                            <h7>{post.user.username}</h7>
+                            <h6>{post.user.username}</h6>
                         </div>
                         </div>
                         <div className="messagePicture">
@@ -74,9 +76,9 @@ return(
                         </div>  
                         <div className="editDelete"> 
                             <Link to={`/posts/${post.id}/edit`}>
-                                <button><img src={edit}/></button>
+                                <button><img src={edit} alt="edit"/></button>
                             </Link>                       
-                            <button onClick={() => handlePostDelete(post.id)}><img src={trash}/></button>
+                            <button onClick={() => handlePostDelete(post.id)}><img src={trash} alt="trash"/></button>
                         </div> 
                     </div>
                     )
@@ -93,8 +95,7 @@ return(
             <div className="classesUser">
                 <div>
                     <h1 className="nameUserProfile">{userUsername}</h1>
-                </div>
-                
+                </div>                
                 <div>
                 <button className="addUser"><img src={add} alt="add"/> </button>
                     <h5 className="classesh5">Classes:</h5> 
@@ -108,7 +109,7 @@ return(
                     <div className="profileLink">
                         <div className="linkProfile">
                             <img  className="imgPostUser" src={post.user.picture} alt="UserImage"/>
-                            <h7>{post.user.username}</h7>
+                            <h6>{post.user.username}</h6>
                         </div>
                     </div>
                     <div className="messagePicture">
@@ -125,6 +126,7 @@ return(
         </div>
     </div> 
     )
+
 
     }
 </div>

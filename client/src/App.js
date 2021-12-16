@@ -97,9 +97,11 @@ function App() {
           <Route path='/users/:id/edit'>
             <UserEdit currentUser={currentUser} setCurrentUser={setCurrentUser} />
           </Route>
+          <div className="App">
           <Route exact path='/users/:id'>
             <Profile currentUser={currentUser} posts={posts} handlePostDelete={handlePostDelete} handleLogout={handleLogout} />
           </Route>
+          </div>
     </div> 
   );
 }

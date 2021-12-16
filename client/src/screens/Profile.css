@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Josefin+Sans&family=Montserrat&family=Raleway:ital@1&display=swap');
+
 .profileImg{
     width: 210vw;
     height: 120vh;
     align-items: center;
-    position: absolute;
+    position: fixed;
     left: -140px;
     top: -25px;
     z-index: 1;
-
+    overflow: hidden;
 }
 .logoOverlap img{
     position: relative;
@@ -16,24 +18,29 @@
     top: 0px;
     z-index: 2;
     backdrop-filter: blur(10px);
-    /* background-color: rgba(228, 145, 224, 0.281); */
-    /* background-color: #C0FDFF, #3c66e3c4 43%, #ECBCFD; */
+}
+.logoOverlap img:hover{
+    transform: scale(1.1);
 }
 .userInfo{
     position: relative;
-    height: 50vh;
     margin-top: 75vh;
-    border-radius: 20px 20px 0 0;
-    background-color: #ffffff;
+    border-radius: 30px 30px 0 0;
+    background-color: #67f6fb81;
     z-index: 2;
+    letter-spacing: 0.5px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 button img{
-    width: 9vw;
     height: 4vh;
 }
 button{
-    background-color: transparent;
+    background-color: white;
     border: none;
+}
+button:hover{
+    background-color: white;
+     transform: scale(1.1);   
 }
 .postsOutterUser {
     min-height: 100vh;
@@ -58,4 +65,42 @@ button{
 .headerUser{
     display: flex;
     justify-content: space-between;
+}
+@media (min-width: 2000px) and (max-width: 2330px) {
+   
+.profileContainer{
+    /* width: 30vw; */
+}
+.profileImg{
+    width: 29.8vw;
+    height: 100vh;
+    left: 49.5rem;
+    top: 0px;
+    right: 10rem;
+}
+}
+@media (min-width: 1040px) and (max-width: 1999px) {
+   
+
+.profileImg{
+    width: 100vw;
+    left: 0;
+}
+.userInfo{
+    margin-top: 50rem;
+}
+}
+@media (min-width: 900px) and (max-width: 1039px) {
+   
+
+.profileImg{
+     left: -40rem;
+}
+.userInfo{
+    margin-top: 40em;
+}
+.classesUser{
+    padding-left: 200px;
+    padding-right: 180px;
+}
 }

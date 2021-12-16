@@ -1,0 +1,75 @@
+#colorBlue{
+    background-color: #6B8DFD;
+}
+#colorRed{
+    background-color: #DE7D8B;
+}
+#colorPurple{
+    background-color: #A88CE8;
+}
+#colorTeal{
+    background-color: #B8F3FF;
+}
+#colorGreen{
+    background-color: #CCFFBD;
+}
+#colorPink{
+    background-color: #FFCBF2;
+}
+#colorOrange{
+    background-color: #F2A37F;    
+}
+.colors{
+    width: 70px;
+    height: 70px;
+    border-radius: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+.colors:hover{
+    transform: scale(1.1);
+}
+.circlesTop{
+    display: flex;
+    margin: 0 2em;
+    margin-top: 2em;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.divStyle{
+    text-align: center;
+    color: honeydew;
+    text-shadow: 0 0 3px #00ccff, 0 0 5px #0000FF;
+}
+/* 
+min-height: 100vh;
+display: flex;
+align-items: center;
+flex-direction: column;
+padding-top: 2rem;
+padding-bottom: 2rem;
+box-sizing: border-box; */
+
+@media (min-width: 1040px) and (max-width: 1999px) {
+
+    .circlesTop{
+        margin: 0 20em; 
+        margin-top: 3em;       
+    }
+    .colors{
+        width: 90px;
+        height: 90px;
+        border-radius: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;  
+    }
+ 
+}

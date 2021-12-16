@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from '../components/Nav';
 import './LogIn.css'
+import logo from '../assets/forButton.png';
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -27,22 +28,19 @@ export default function Login(props) {
       e.preventDefault();
       handleLogin(formData);
     }}>
-      <label>
+      <label class="blue-text text-darken-2">
         <input
           id="username"
-          class="validate"
           type='text'
-          data-length="10"
           name='username'
           value={username}
           onChange={handleChange}/>
           Username
       </label>
       <br />
-      <label for="password">      
+      <label class="blue-text text-darken-2">      
         <input
           id="password"
-          class="validate"
           type='password'
           name='password'
           value={password}
@@ -51,11 +49,11 @@ export default function Login(props) {
       <br/>
       <br/>
       <div>
-      <button>Co-Lab</button>
+      <button className="loginButton"><img src={logo} alt="Co-Lab"/></button>
       </div>
     </form>
     <br />
-    <Link to='/singup'>SignUp</Link>
+    <Link className="singupLink" to='/singup'>SignUp</Link>
     </div>
   </div>
   );

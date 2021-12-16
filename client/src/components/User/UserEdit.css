@@ -1,18 +1,16 @@
 #cardUserEdit{
     margin-top: 10vh;
     margin-left: 7vw;
-    height: var(--card-height);
+    /* height: var(--card-height); */
     justify-content: center;
 }
 #labelUserEdit{
     padding: 50px 30px 0 30px;
 }
-.buttonLogoEdit img{
-    /* background-color: turquoise; */
-    width: 10em;
-    height: 10em;
-    align-content: center;
-    align-items: center;
+#buttonLogoEdit{
+    margin: auto;
+    display: block;
+    padding-top: 6vh;
 }
 .classesUser{
     display: flex;
@@ -35,3 +33,16 @@
 .classesImg{
     padding-right: 1em;
 }
+ /* label underline focus color */
+  #cardUserEdit input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+ 
+  @media (min-width: 1040px) and (max-width: 1999px) {
+    #cardUserEdit{
+     margin: auto auto;
+     margin-top: 10rem;
+    }
+     
+   }

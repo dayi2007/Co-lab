@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import logo from '../../assets/logoSmall.png';
+import logo from '../../assets/forButton.png';
 import Nav from '../Nav';
 import './PostEdit.css'
 
@@ -38,11 +38,13 @@ export default function PostEdit({ posts, handlePostUpdate, currentUser }) {
         handlePostUpdate(id, formData);
       }}
     >
-      <label>
+      <label> Post
         <input type='text' name='message' value={message} onChange={handleChange} />
+      </label>
+      <label> Picture
         <input type='text' name='picture' value={picture} required autoFocus onChange={handleChange} />
       </label>
-      <button className="buttonLogo"><img src={logo}/></button>
+      <button className="buttonLogo" id="buttonLogoPostEdit"><img src={logo} alt="logo"/></button>
     </form>
     </div>
   </div>

@@ -5,11 +5,13 @@ import './PostList.css';
 import edit from '../../assets/edit.png';
 import trash from '../../assets/binPaper.png';
 import like from '../../assets/favorite.png';
+import Classes from '../Classes'
 
-const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
+const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {    window.scrollTo(0, 0)
     return(
     <div>
-        <Layout currentUser={currentUser} handleLogout={handlePostDelete} handleLogout={handleLogout}>
+       <Layout currentUser={currentUser} handlePostDelete={handlePostDelete} handleLogout={handleLogout}>
+        <Classes />
         <div className='postsOutter'>
         {
              posts?.map((post) =>(
@@ -17,7 +19,7 @@ const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {
                     <div className="profileLink">
                         <Link to={`/users/${post.user_id}`} className="linkProfile">
                         <img className="imgPostUser" src={post.user.picture} alt="UserImage"/>
-                        <h7>{post.user.username}</h7> </Link>
+                        <h6>{post.user.username}</h6> </Link>
                     </div>
                     <div className="messagePicture">
                         <p className="message">{post.message}</p>
