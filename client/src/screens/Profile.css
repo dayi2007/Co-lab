@@ -35,11 +35,11 @@ button img{
     height: 4vh;
 }
 button{
-    background-color: white;
+    background-color: transparent;
     border: none;
 }
 button:hover{
-    background-color: white;
+    background-color: transparent;
      transform: scale(1.1);   
 }
 .postsOutterUser {
