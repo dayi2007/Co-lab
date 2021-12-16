@@ -9,5 +9,10 @@
   padding-top: 6vh;
 }
 @media (min-width: 1040px) and (max-width: 1999px){
+
+  #cardPostEdit{
+     margin: auto auto;
+     margin-top: 10rem;
+  }
   
 }
