@@ -40,8 +40,8 @@ const PostList = ({ posts, handlePostDelete, currentUser, handleLogout }) => {  
             ))   
         }
         </div>
-       <Link to ={currentUser ? '/create' : '/login'}>
-        <button>Create</button></Link> 
+       {/* <Link to ={currentUser ? '/create' : '/login'}>
+        <button>Create</button></Link>  */}
       </Layout>
     </div>
     )

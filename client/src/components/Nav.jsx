@@ -26,11 +26,6 @@ export default function Nav({currentUser, handleLogout}) {
             </div>
           </div>          
         )}
-        {/* {currentUser && (
-          <nav>
-            <Link to='/create'>|Star-create|</Link>
-          </nav>
-        )} */}
         </div>
       </header>
 );
