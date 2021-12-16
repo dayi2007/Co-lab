@@ -28,22 +28,19 @@ export default function Login(props) {
       e.preventDefault();
       handleLogin(formData);
     }}>
-      <label>
+      <label class="blue-text text-darken-2">
         <input
           id="username"
-          class="validate"
           type='text'
-          data-length="10"
           name='username'
           value={username}
           onChange={handleChange}/>
           Username
       </label>
       <br />
-      <label for="password">      
+      <label class="blue-text text-darken-2">      
         <input
           id="password"
-          class="validate"
           type='password'
           name='password'
           value={password}

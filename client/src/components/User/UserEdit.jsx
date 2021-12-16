@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import logo from '../../assets/logoSmall.png';
+import logo from '../../assets/forButton.png';
 import { putUser } from '../../services/auth';
 import {  useHistory } from "react-router-dom";
 import Nav from '../Nav';
@@ -37,9 +37,9 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
   };
 
   return (
-  <div className="card" id="cardUserEdit">
+  <div>
     <Nav/>
-    <div>
+    <div className="card" id="cardUserEdit">
     <form
      id="labelUserEdit"
       onSubmit={(e) => {
@@ -47,11 +47,14 @@ export default function UserEdit({ setCurrentUser, currentUser}) {
         handleUserUpdate(id, formData);
       }}
     >
-      <label>
+      <label class="blue-text text-darken-2">Username
         <input type='text' name='username' placeholder="Cange your Username" value={username} onChange={handleChange} />
+      </label>
+      <br/>
+      <label class="blue-text text-darken-2">Picture
         <input type='text' name='picture' placeholder="Cange your Picture" value={picture} onChange={handleChange} />
       </label>
-      <button className="buttonLogoEdit"><img src={logo}/></button>
+      <button id="buttonLogoEdit"><img src={logo} alt="logo"/></button>
     </form>
     </div>
   </div>

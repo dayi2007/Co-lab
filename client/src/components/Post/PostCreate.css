@@ -1,0 +1,27 @@
+#buttonPostCreate{
+    margin: auto;
+    display: block;
+    padding-top: 6vh;
+}
+#cardPostCreate{
+    height: var(--card-height);
+    display: block;
+    margin: auto;
+}
+#cardPostCreate form{
+    padding-top: 100px;
+}
+/* button{
+    background-color: transparent;
+}
+image{
+    background-color: transparent;
+} */
+
+@media (min-width: 1040px) and (max-width: 1999px) {
+    #cardPostCreate{
+     margin: auto auto;
+     margin-top: 10rem;
+    }
+     
+   }

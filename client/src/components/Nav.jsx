@@ -6,6 +6,7 @@ export default function Nav({currentUser, handleLogout}) {
       <header>
         <Link className="logoTop" to='/'><img src={logo} alt="Co-Lab"/></Link>
         <div  className="headerDesktop">
+        <Link className="logoTop" to='/'><img src={logo} alt="Co-Lab"/></Link>
         {currentUser ? (
           <div className="currentUser">
             <Link to={`/users/${currentUser.id}`}>
@@ -13,7 +14,7 @@ export default function Nav({currentUser, handleLogout}) {
             <h5 >Welcome, {currentUser.username}</h5></div>
             <div className="profilePicBorder">
                 <div className="profileWhite">
-                    <img className="profilePicture" src={currentUser.picture} alt="user-picture"/> 
+                    <img className="profilePicture" src={currentUser.picture} alt="user"/> 
                 </div>
             </div>
             </Link>

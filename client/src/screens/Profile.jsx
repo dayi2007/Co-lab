@@ -67,7 +67,7 @@ return(
                         <div className="profileLink">
                         <div className="linkProfile">
                             <img  className="imgPostUser" src={post.user.picture} alt="UserImage"/>
-                            <h7>{post.user.username}</h7>
+                            <h6>{post.user.username}</h6>
                         </div>
                         </div>
                         <div className="messagePicture">
@@ -76,9 +76,9 @@ return(
                         </div>  
                         <div className="editDelete"> 
                             <Link to={`/posts/${post.id}/edit`}>
-                                <button><img src={edit}/></button>
+                                <button><img src={edit} alt="edit"/></button>
                             </Link>                       
-                            <button onClick={() => handlePostDelete(post.id)}><img src={trash}/></button>
+                            <button onClick={() => handlePostDelete(post.id)}><img src={trash} alt="trash"/></button>
                         </div> 
                     </div>
                     )
@@ -109,7 +109,7 @@ return(
                     <div className="profileLink">
                         <div className="linkProfile">
                             <img  className="imgPostUser" src={post.user.picture} alt="UserImage"/>
-                            <h7>{post.user.username}</h7>
+                            <h6>{post.user.username}</h6>
                         </div>
                     </div>
                     <div className="messagePicture">

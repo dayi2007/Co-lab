@@ -26,7 +26,7 @@
     position: relative;
     margin-top: 75vh;
     border-radius: 30px 30px 0 0;
-    background-color: #67f6fb9b;
+    background-color: #67f6fb81;
     z-index: 2;
     letter-spacing: 0.5px;
     font-family: 'Josefin Sans', sans-serif;
@@ -35,10 +35,11 @@ button img{
     height: 4vh;
 }
 button{
-    background-color: transparent;
+    background-color: white;
     border: none;
 }
 button:hover{
+    background-color: white;
      transform: scale(1.1);   
 }
 .postsOutterUser {

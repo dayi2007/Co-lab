@@ -3,3 +3,11 @@
   margin-left: 7vw;
   height: var(--card-height);
 }
+.buttonLogoPostEdit{
+  margin: auto;
+  display: block;
+  padding-top: 6vh;
+}
+@media (min-width: 1040px) and (max-width: 1999px){
+  
+}

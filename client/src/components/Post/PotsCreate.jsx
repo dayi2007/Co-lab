@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import logo from '../../assets/logoSmall.png';
+import logo from '../../assets/forButton.png';
 import Nav from '../Nav';
+import './PostCreate.css';
 
 export default function PostCreate({ handlePostCreate, toggleFetch, setToggleFetch }) {
   const [formData, setFormData] = useState({
@@ -19,21 +20,34 @@ export default function PostCreate({ handlePostCreate, toggleFetch, setToggleFet
   };
 
   return (
-  <div className="card">
+  <div >
     <Nav/>
+    <div className="card" id="cardPostCreate">
     <form
       onSubmit={(e) => {
         e.preventDefault();
         handlePostCreate(formData);
       }}
     >
-      <h3>Co-Lab</h3>
-      <label>
-        <input type='text' name='message' value={message} onChange={handleChange} />
-        <input type='text' name='picture' value={picture} onChange={handleChange} />
+      <label className="blue-text text-darken-2"> Post
+        <textarea
+        class="blue-text text-darken-2" 
+        type='text' 
+        name='message' 
+        value={message} 
+        onChange={handleChange} />
       </label>
-      <button className="buttonLogo"><img src={logo}/></button>
+      <label className="blue-text text-darken-2"> Picture
+        <textarea
+        type='text'
+        class="blue-text text-darken-2"
+        name='picture'
+        value={picture}
+        onChange={handleChange} />
+      </label>
+      <button className="buttonLogo" id="buttonPostCreate"><img src={logo} alt="logo"/></button>
     </form>
+  </div>
   </div>
   );
 }

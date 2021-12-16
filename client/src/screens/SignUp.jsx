@@ -31,17 +31,18 @@ export default function Register(props) {
         handleSignUp(formData);
       }}
     >
-      <label className="uploadProfilePicture">
+      <label class="blue-text text-darken-2">
         Profile Picture:
         <input
-          type='url'
+          type='text'
           name='picture'
           value={picture}
           onChange={handleChange}
         />
       </label>
-      <br/>
-      <label>
+      <br />
+      <br />
+      <label class="blue-text text-darken-2">
         Username:
         <input
           type='text'
@@ -51,7 +52,8 @@ export default function Register(props) {
         />
       </label>
       <br />
-      <label>
+      <br />
+      <label class="blue-text text-darken-2">
         Email:
         <input
           type='text'
@@ -61,7 +63,8 @@ export default function Register(props) {
         />
       </label>
       <br />
-      <label>
+      <br />
+      <label class="blue-text text-darken-2">
         Password:
         <input
           type='password'
@@ -70,7 +73,6 @@ export default function Register(props) {
           onChange={handleChange}
         />
       </label>
-      <br />
       <button className="signupButton"><img src={logo} alt="Co-Lab"/></button>
     </form>
     </div>
