@@ -1,6 +1,6 @@
 # Co-lab
 
-#https://class-colab.netlify.app/
+# https://class-colab.netlify.app/
 
 - [Overview](#overview)
 - [MVP](#mvp)
